@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 15px;
+}
+
+#logo {
+  width: 110px;
+  height: 110px;
+}
+
+.menu {
+  font-size: 22px;
+}
+
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: orange;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+footer {
+  padding-top: 15px;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-box {
+    padding-bottom: 50px;
+    align-items: center;
+  }
+}
+.footer-box .mapa {
+  margin-bottom: 5px;
+  width: 125px;
+  height: 125px;
+}
+
+#complejo {
+  background: url(../images/complejo-fondo.jpeg) center center/cover no-repeat;
+}
+#complejo p {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.text-flicker-in-glow {
+  animation: text-flicker-in-glow 2s linear both;
+}
+
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+    ext-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+}
+.imagebox {
+  border: 10px groove orange;
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+}
+.imagebox .imagebox-desc {
+  background-color: rgba(255, 165, 0, 0.6);
+  bottom: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  left: 0px;
+  position: absolute;
+  transition: 0.5s padding;
+  text-align: center;
+  width: 100%;
+}
+.imagebox img {
+  max-width: 100%;
+  opacity: 1;
+  transition: 0.5s opacity;
+}
+.imagebox:hover img {
+  opacity: 0.8;
+}
+.imagebox:hover .imagebox-desc {
+  padding-bottom: 10%;
+}
+
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow::before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 95%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgb(255, 255, 255) 0%, rgba(255, 253, 253, 0) 80%);
+  background: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgba(255, 254, 254, 0) 80%);
+}
+
+#futbol {
+  background: url(../images/futbol-fondo.jpg);
+}
+
+.table-title {
+  font-size: 25px;
+}
+
+table {
+  margin: 70px 0px;
+}
+
+#ubicacion {
+  background: url(../images/ubicacion-fondo.jpg);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.texto-ubicacion {
+  align-self: center;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .texto-ubicacion {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.mapa iframe {
+  width: 85%;
+}
+
+#contacto {
+  background: url(../images/contacto.jpg) center center/cover no-repeat;
+}
+
+#rocket {
+  margin-top: 100px;
+}
+
+#formulario {
+  padding-top: 20px;
+}
+
+.contact-form {
+  width: 70%;
+}
+.contact-form .form-control {
+  border-radius: 1rem;
+}
+.contact-form form {
+  padding: 9%;
+}
+.contact-form h2 {
+  margin-bottom: 8%;
+  margin-top: -10%;
+  text-align: center;
+  color: white;
+}
+
+.contact-image {
+  text-align: center;
+}
+.contact-image img {
+  border-radius: 6rem;
+  width: 11%;
+  transform: rotate(29deg);
+}
+
+#reserva {
+  background: url(../images/reserva-fondo.jpg);
+}
+
+.boton-comprar input {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.modal-body {
+  height: 450px;
+}
+
+.nav-tabs {
+  border: none !important;
+  display: table !important;
+  width: 100%;
+}
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  border: 1px solid transparent;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+  border-top: 3px solid #eee;
+  font-size: 20px;
+}
+.nav-tabs .nav-link:hover {
+  border-color: #e9ecef #ffffff #ffffff;
+}
+.nav-tabs .nav-link .active {
+  color: #495057;
+  background-color: white;
+  border-color: white white white;
+  border-top: 3px solid blue !important;
+}
+
+.nav-item {
+  display: table-cell;
+}
+
+.form-control {
+  border-bottom: 1px solid #eee !important;
+  border: none;
+  font-weight: 600;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: white;
+  border-color: #8bbafe;
+  outline: 0;
+  box-shadow: none;
+}
+
+.inputbox {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.inputbox span {
+  position: absolute;
+  top: 7px;
+  left: 11px;
+  transition: 0.5s;
+}
+.inputbox i {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  transition: 0.5s;
+  color: #3F51B5;
+}
+
+.bloqueado {
+  background: rgb(207, 207, 207);
+}
+
+.espaciado {
+  margin: 40px;
+}
+
+#tenis {
+  background: url(../images/tenis-fondo.jpg);
+}
+
+#reserva h1, #contacto h1, #ubicacion h1, #tenis h1, #futbol h1, #complejo h1 {
+  font-weight: bold;
+  color: white;
+}
+
+.footer-box .map a, .footer-box .map, .footer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box p, .footer-box a {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+#reserva::after, #contacto::after, #ubicacion::after, #tenis::after, #futbol::after, #complejo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right top, rgba(0, 0, 0, 0.7411764706), rgba(0, 0, 0, 0.568627451), rgba(0, 0, 0, 0.4156862745), rgba(0, 0, 0, 0.368627451), rgba(0, 0, 0, 0.1764705882), rgba(0, 0, 0, 0.0470588235), rgba(80, 80, 80, 0));
+  z-index: -1;
+}
+
+.btnContactSubmit, .contact-form .btnContact {
+  padding: 1.5;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hvr-underline-from-left:active::before, .hvr-underline-from-left:focus::before, .hvr-underline-from-left:hover::before {
+  right: 0;
+}
+
+.hvr-float-shadow:active, .hvr-float-shadow:focus, .hvr-float-shadow:hover {
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.hvr-float-shadow:active:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+}
+
+.contact-form .btnContact {
+  width: max-content;
+  border-radius: 2rem;
+  background: #dc3545;
+  color: white;
+}
+
+.btnContactSubmit {
+  width: 50%;
+  border-radius: 1rem;
+  color: white;
+  background-color: #0062cc;
+}
+
+.footer-box .map {
+  align-items: flex-end;
+}
+.footer-box .map a {
+  font-size: 17px;
+  align-items: center;
+}
+.footer-box a {
+  text-decoration: none;
+  padding: 5px;
+  font-size: 25px;
+}
+.footer-box p {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

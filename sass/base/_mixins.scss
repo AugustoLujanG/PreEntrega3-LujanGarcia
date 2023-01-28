@@ -1,0 +1,4 @@
+@mixin botones ($ancho, $redondeado) {
+    width: $ancho;
+    border-radius: $redondeado;
+}
