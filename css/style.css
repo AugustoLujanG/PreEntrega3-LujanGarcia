@@ -427,7 +427,7 @@ table {
 }
 
 #carro {
-  background: url(../images/carrito\ fondo.jpg) center center/cover no-repeat;
+  background: url(../images/carrito-fondo.jpg) center center/cover no-repeat;
 }
 
 #carro h1, #reserva h1, #contacto h1, #ubicacion h1, #tenis h1, #futbol h1, #complejo h1 {
