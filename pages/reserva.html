@@ -58,6 +58,7 @@
 						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="ubicacion.html">Cómo Llegar</a></li>
 						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="contacto.html">Contacto</a></li>
 						<li class="nav-item hvr-underline-from-left"><a class="nav-link active" href="reserva.html">Reserva Online</a></li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link active" href="carrito.html"><img src="../images/carrito logo.png" alt="carrito" style="width: 23px; height: 23px"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -76,23 +77,40 @@
 			<div class="row">
 				<div class="col-md contact-form">
 					<div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-						<select class="form-control espaciado">
-							<option disabled selected>Cancha</option>
-							<option value="Fútbol 5" >Fútbol 5</option>
-							<option value="Fútbol 8">Fútbol 8</option>
-							<option value="Tenis">Tenis</option>
-						</select>
+						<form action="">
+							<select class="form-control espaciado" id="tipo">
+								<option disabled selected>Cancha</option>
+								<option value="Fútbol 5" >Fútbol 5</option>
+								<option value="Fútbol 8">Fútbol 8</option>
+								<option value="Tenis descubierta">Tenis descubierta</option>
+								<option value="Tenis techada">Tenis techada</option>
+								<option value="Paddle">Paddle</option>
+							</select>
 
-						<input type="date" class="form-control espaciado">
-							
-						<select class="form-control espaciado">
-							<option disabled selected>Turno</option>
-							<option value="9 a 10">9 a 10</option>
-						</select>							
+							<input type="date" class="form-control espaciado" id="dia">
+								
+							<select class="form-control espaciado" id="hora">
+								<option disabled selected>Turno</option>
+								<option value="9">9 a 10</option>
+								<option value="10">10 a 11</option>
+								<option value="11">11 a 12</option>
+								<option value="12">12 a 13</option>
+								<option value="13">13 a 14</option>
+								<option value="14">14 a 15</option>
+								<option value="15">15 a 16</option>
+								<option value="16">16 a 17</option>
+								<option value="17">17 a 18</option>
+								<option value="18">18 a 19</option>
+								<option value="19">19 a 20</option>
+								<option value="20">20 a 21</option>
+								<option value="21">21 a 22</option>
+								<option value="22">22 a 23</option>
+								<option value="23">23 a 00</option>
+							</select>							
 
-						<input class="form-control bloqueado espaciado" type=»text» readonly=»readonly» placeholder="$ PRECIO"/>
+							<input type="submit" name="btnSubmit" class="btnContact espaciado" id="sumar" value="Agregar al carrito" />
 						
-						<input class="form-control bloqueado espaciado" type=»text» readonly=»readonly» placeholder="$ SEÑA"/>
+						</form>
 					</div>
 				</div>
 
@@ -203,6 +221,10 @@
 	<script>
 	AOS.init();
 	</script>
+
+	<script src="../Cancha.js"></script>
+	<script src="../Item.js"></script>
+	<script src="../app.js"></script>
 
 </body>
 </html>
