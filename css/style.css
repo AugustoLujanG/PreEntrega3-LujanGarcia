@@ -20,6 +20,19 @@ body::-webkit-scrollbar-thumb {
   height: 110px;
 }
 
+#count-product {
+  position: absolute;
+  top: 0px;
+  right: -2px;
+  background-color: white;
+  padding: 1px 2px;
+  border-radius: 50%;
+  color: red;
+  font-weight: 700;
+  font-family: system-ui;
+  line-height: 18px;
+}
+
 .menu {
   font-size: 22px;
 }

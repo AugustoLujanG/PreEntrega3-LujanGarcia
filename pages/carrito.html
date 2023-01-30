@@ -65,7 +65,7 @@
 						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="ubicacion.html">Cómo Llegar</a></li>
 						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="contacto.html">Contacto</a></li>
 						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="reserva.html">Reserva Online</a></li>
-						<li class="nav-item hvr-underline-from-left"><a class="nav-link active" href="carrito.html"><img src="../images/carrito logo.png" alt="carrito" style="width: 23px; height: 23px"></a></li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link active" href="carrito.html"><img src="../images/carrito logo.png" alt="carrito" style="width: 23px; height: 23px"><p id="count-product">0</p></a></li>
 					</ul>
 				</div>
 			</div>
@@ -80,11 +80,11 @@
 			<br><br><br><br>
 		</section>
         <div class="container">
-			<div class="row">
+			<div class="row table-dark">
 				<form id="agregar">
-					<label for="productos">Elija un producto</label>
+					<label style="margin: 10px 0px; font-size: 30px;" for="canchas">Elija una cancha</label>
 
-					<select id="productos" class="form-control">
+					<select id="canchas" class="form-control">
 					</select>
 					<br>
 					<button id="agregar" class="btn btn-primary">Agregar</button>
@@ -92,13 +92,15 @@
 			</div>
 
 			<div class="row">
-				<div class="table-responsive-md" data-aos="fade-up" data-aos-anchor-placement="top-center">
+				<div class="table-responsive-md">
 					<table class="table table-striped">
 						<thead class="table table-dark table-striped table-bordered">
 							<tr>
-								<th class="text-center table-title">Nombre</th>
+								<th class="text-center table-title">Tipo</th>
+								<th class="text-center table-title">Dia</th>
+								<th class="text-center table-title">Hora</th>
 								<th class="text-center table-title">Cantidad</th>
-								<th class="text-center table-title">Precio Unitario</th>
+								<th class="text-center table-title">Precio</th>
 								<th class="text-center table-title">Operacion</th>
 							</tr>
 						</thead>
@@ -106,17 +108,15 @@
 						</tbody>
 						<tfoot class="table table-dark table-striped table-bordered">
 							<tr>
-								<th>Total: </th>
-								<th></th>
-								<th id="total"></th>
-								<th></th>
+								<th class="text-center table-title">TOTAL</th>
+								<th colspan="4" class="text-center table-title" id="total"></th>
 							</tr>
 						</tfoot>
 					</table>
 				</div>
 
 				<div class="container">
-					<button id="vaciar" class="btn btn-primary">Vaciar</button>
+					<button id="vaciar" class="btn btn-danger">Vaciar</button>
 				</div>
 			</div>
 		</div>
@@ -158,9 +158,10 @@
 	<!-- Bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-	<script src="../Cancha.js"></script>
-    <script src="../Item.js"></script>
-    <script src="../app.js"></script>
+	<script src="../models/Cancha.js"></script>
+	<script src="../models/Item.js"></script>
+	<script src="../table.js"></script>
+	
 
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>

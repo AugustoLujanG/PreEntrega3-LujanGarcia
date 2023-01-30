@@ -1,6 +1,6 @@
 class Item {
     cancha; /// de tipo Cancha
-    cantidad; /// de tipo Number
+    cantidad;
 
     constructor(cancha, cantidad) {
         this.cancha = cancha;
