@@ -426,7 +426,11 @@ table {
   background: url(../images/tenis-fondo.jpg);
 }
 
-#reserva h1, #contacto h1, #ubicacion h1, #tenis h1, #futbol h1, #complejo h1 {
+#carro {
+  background: url(../images/carrito\ fondo.jpg) center center/cover no-repeat;
+}
+
+#carro h1, #reserva h1, #contacto h1, #ubicacion h1, #tenis h1, #futbol h1, #complejo h1 {
   font-weight: bold;
   color: white;
 }
@@ -442,7 +446,7 @@ table {
   font-weight: bold;
 }
 
-#reserva::after, #contacto::after, #ubicacion::after, #tenis::after, #futbol::after, #complejo::after {
+#carro::after, #reserva::after, #contacto::after, #ubicacion::after, #tenis::after, #futbol::after, #complejo::after {
   content: "";
   position: absolute;
   top: 0;
