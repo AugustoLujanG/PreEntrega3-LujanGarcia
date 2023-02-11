@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 body::-webkit-scrollbar {
   width: 4px;
 }
@@ -357,78 +363,29 @@ table {
   background: url(../images/reserva-fondo.jpg);
 }
 
-.boton-comprar input {
-  margin-top: 30px;
-  padding: 10px;
-  font-size: 25px;
-  border-radius: 10px;
+.clima {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(32, 32, 32, 0.795);
+  margin: 0.5rem 2rem;
+  text-align: center;
+  padding: 1.5rem 0;
 }
-
-.modal-body {
-  height: 450px;
+.clima div {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
-
-.nav-tabs {
-  border: none !important;
-  display: table !important;
-  width: 100%;
+.clima div h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
-.nav-tabs .nav-link {
-  margin-bottom: -1px;
-  border: 1px solid transparent;
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem;
-  border-top: 3px solid #eee;
-  font-size: 20px;
-}
-.nav-tabs .nav-link:hover {
-  border-color: #e9ecef #ffffff #ffffff;
-}
-.nav-tabs .nav-link .active {
-  color: #495057;
-  background-color: white;
-  border-color: white white white;
-  border-top: 3px solid blue !important;
-}
-
-.nav-item {
-  display: table-cell;
-}
-
-.form-control {
-  border-bottom: 1px solid #eee !important;
-  border: none;
+.clima div p {
+  font-size: 1.5rem;
   font-weight: 600;
-}
-.form-control:focus {
-  color: #495057;
-  background-color: white;
-  border-color: #8bbafe;
-  outline: 0;
-  box-shadow: none;
-}
-
-.inputbox {
-  position: relative;
-  margin-bottom: 20px;
-  width: 100%;
-}
-.inputbox span {
-  position: absolute;
-  top: 7px;
-  left: 11px;
-  transition: 0.5s;
-}
-.inputbox i {
-  position: absolute;
-  top: 13px;
-  right: 8px;
-  transition: 0.5s;
-  color: #3F51B5;
-}
-
-.bloqueado {
-  background: rgb(207, 207, 207);
+  letter-spacing: 0.1rem;
 }
 
 .espaciado {
@@ -441,6 +398,170 @@ table {
 
 #carro {
   background: url(../images/carrito-fondo.jpg) center center/cover no-repeat;
+}
+
+.tarjeta {
+  width: 288px;
+  height: 160px;
+  color: hsl(0deg, 0%, 100%);
+  padding: 20px;
+  background-image: url("../images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  letter-spacing: 2px;
+}
+@media (min-width: 1440px) {
+  .tarjeta {
+    width: 450px;
+    height: 247px;
+    padding: 30px;
+  }
+}
+.tarjeta_logo {
+  width: 55px;
+  margin-bottom: 30px;
+}
+.tarjeta_numero {
+  margin-bottom: 15px;
+}
+.tarjeta_detalle {
+  display: flex;
+  font-size: 0.6em;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+  .tarjeta_logo {
+    width: 86px;
+    margin-bottom: 55px;
+  }
+  .tarjeta_numero {
+    font-size: 1.6em;
+    margin-bottom: 25px;
+  }
+  .tarjeta_detalle {
+    font-size: 0.8em;
+  }
+}
+
+.tarjeta_reverso {
+  width: 288px;
+  height: 160px;
+  color: hsl(0deg, 0%, 100%);
+  padding: 20px;
+  background-image: url("../images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  letter-spacing: 2px;
+}
+@media (min-width: 1440px) {
+  .tarjeta_reverso {
+    width: 450px;
+    height: 247px;
+    padding: 30px;
+  }
+}
+.tarjeta_reverso_cvv {
+  font-size: 0.7em;
+  margin-top: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+@media (min-width: 1440px) {
+  .tarjeta_reverso_cvv {
+    font-size: 1em;
+    margin-top: 80px;
+    padding-right: 30px;
+  }
+}
+
+.form_label {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  letter-spacing: 2px;
+  color: white;
+  font-weight: bold;
+}
+.form_input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  font-family: "Space Grotesk", sans-serif;
+  padding-left: 10px;
+  font-size: 1em;
+  outline: none;
+}
+.form_input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.form_fecha-cvv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+.form_fecha {
+  display: flex;
+  gap: 10px;
+}
+.form_submit, .gracias_button {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.form_submit:hover, .gracias_button:hover {
+  cursor: pointer;
+}
+
+.error {
+  color: hsl(0deg, 100%, 66%);
+  margin: -10px 0 18px;
+  font-size: 0.6em;
+}
+
+.form_errors-container {
+  display: flex;
+  gap: 5px;
+}
+
+.form_errors-container div {
+  width: 100px;
+  text-align: center;
+}
+
+.gracias {
+  display: none;
+}
+.gracias_img {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.gracias_title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.gracias_text {
+  text-align: center;
+  color: hsl(279deg, 6%, 55%);
+  font-size: 1.1em;
+  margin-bottom: 24px;
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
 }
 
 #carro h1, #reserva h1, #contacto h1, #ubicacion h1, #tenis h1, #futbol h1, #complejo h1 {
