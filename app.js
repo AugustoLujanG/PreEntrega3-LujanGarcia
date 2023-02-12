@@ -1,4 +1,3 @@
-let carrito = []
 let canchas = []
 
 const selectTipo = document.getElementById('tipo');

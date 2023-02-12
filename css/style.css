@@ -363,13 +363,15 @@ table {
   background: url(../images/reserva-fondo.jpg);
 }
 
+.fondo {
+  margin-top: 80px;
+}
+
 .clima {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background-color: rgba(32, 32, 32, 0.795);
-  margin: 0.5rem 2rem;
   text-align: center;
   padding: 1.5rem 0;
 }
@@ -379,12 +381,12 @@ table {
   line-height: 1.6;
 }
 .clima div h2 {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.7rem;
+  font-weight: bold;
 }
 .clima div p {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 0.1rem;
 }
 

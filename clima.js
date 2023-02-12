@@ -1,57 +1,97 @@
-const ciudadGeolocalizada = document.getElementById("ciudad-geolocalizada");
-const fechaGeolocalizada = document.getElementById("fecha-geolocalizada");
-const temperaturaGeolocalizada = document.getElementById("temperatura-geolocalizada");
-const informacionGeolocalizada = document.getElementById("informacion-geolocalizada");
-const humedadGeolocalizada = document.getElementById("humedad-geolocalizada");
-const vientoGeolocalizado = document.getElementById("viento-geolocalizado");
-const iconoGeolocalizado = document.getElementsByClassName("caja-ciudad");
-const permitirUbicacion = document.getElementById("permitir-ubicacion");
+const ciudad_api = document.getElementById("ciudad-api");
+const fecha_api = document.getElementById("fecha-api");
+const temperatura_api = document.getElementById("temperatura-api");
+const informacion_api = document.getElementById("informacion-api");
+const humedad_api = document.getElementById("humedad-api");
+const viento_api = document.getElementById("viento-api");
+const icono_api = document.getElementsByClassName("ciudad");
+const fondo = document.getElementById("fondos");
 
-
-// Tu clave API de OpenWeather
 const claveAPI = "6c0d3feb4e345e0f7d513c4a3e82e61f";
 
-// Creación de la función Clima
-function clima(){
-    // Localizamos el dispositivo que ingresa a la página
-      let latitud = -34.54430939351462;
-      let longitud = -58.46031572625473;
-      let url = `https://api.openweathermap.org/data/2.5/weather?&lat=${latitud}&lon=${longitud}&appid=${claveAPI}&lang=es&units=metric`;
-      
+function clima() {
+  let latitud = -34.54430939351462;
+  let longitud = -58.46031572625473;
+  let url = `https://api.openweathermap.org/data/2.5/weather?&lat=${latitud}&lon=${longitud}&appid=${claveAPI}&lang=es&units=metric`;
 
-      // Realizamos una petición fetch con la url de la API
-      fetch(url)
-        .then(respuesta => respuesta.json())
-        .then(info => {
-          
-          // Introducimos en el DOM los elementos seleccionados
-          let fecha = new Date(info.dt*1000);
+  fetch(url)
+    .then(respuesta => respuesta.json())
+    .then(info => {
+      let fecha = new Date(info.dt * 1000);
 
-          fechaGeolocalizada.textContent = fecha.getDate() +"/" + (fecha.getMonth()+1) + "/" + fecha.getFullYear() + " " + fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds();
-          
-          let ciudad = info.name;
-          ciudadGeolocalizada.textContent = ciudad;
+      fecha_api.textContent = fecha.getDate() + "/" + (fecha.getMonth() + 1) + "/" + fecha.getFullYear() + " " + fecha.getHours() + ":" + (fecha.getMinutes() < 10 ? '0' : '') + fecha.getMinutes() + ":" + (fecha.getSeconds() < 10 ? '0' : '') + fecha.getSeconds();
 
-          let temperatura = info.main.temp;
-          temperaturaGeolocalizada.textContent = `${temperatura} °C`
+      let ciudad = info.name;
+      ciudad_api.textContent = ciudad;
 
-          let informacion = info.weather[0].description;
-          informacionGeolocalizada.textContent = informacion.toUpperCase();
+      let temperatura = info.main.temp;
+      temperatura_api.textContent = `${temperatura} °C`
 
-          let humedad = info.main.humidity;
-          humedadGeolocalizada.textContent = `${humedad} %`
+      let informacion = info.weather[0].description;
+      informacion_api.textContent = informacion.charAt(0).toUpperCase() + informacion.slice(1);
 
-          let viento = ((info.wind.speed) * 3.6).toFixed(2);
-          vientoGeolocalizado.textContent = `${viento} Km/h`;
+      let humedad = info.main.humidity;
+      humedad_api.textContent = `${humedad} %`
 
-          let icono = info.weather[0].icon;
+      let viento = ((info.wind.speed) * 3.6).toFixed(2);
+      viento_api.textContent = `${viento} Km/h`;
 
-          let img = document.createElement("img");
-          img.src = `http://openweathermap.org/img/wn/${icono}.png`;
-          img.classList.add("icono")
-          iconoGeolocalizado[0].appendChild(img);
-        })
-        .catch(error => console.error(error));
+      let icono = info.weather[0].icon;
+
+      let img = document.createElement("img");
+      img.src = `http://openweathermap.org/img/wn/${icono}.png`;
+      img.classList.add("icono")
+      icono_api[0].appendChild(img);
+
+      // ver codigos de icono en https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2
+
+      if (info.weather[0].icon == '01d') {
+        fondo.style.background = `url(../images/clima/despejado.png) center center / cover no-repeat`
+      } else {
+        if (info.weather[0].icon == '01n') {
+          fondo.style.background = `url(../images/clima/despejado-noche.jpg) center center / cover no-repeat`
+        } else {
+          if (info.weather[0].icon == '02d') {
+            fondo.style.background = `url(../images/clima/despejado-nubes.jpg) center center / cover no-repeat`
+          } else {
+            if (info.weather[0].icon == '02n') {
+              fondo.style.background = `url(../images/clima/despejado-nubes-noche.jpg) center center / cover no-repeat`
+            } else {
+              if (info.weather[0].icon == '03d' || info.weather[0].icon == '04d') {
+                fondo.style.background = `url(../images/clima/nublado.jpg) center center / cover no-repeat`
+              } else {
+                if (info.weather[0].icon == '03n' || info.weather[0].icon == '04n') {
+                  fondo.style.background = `url(../images/clima/nublado-noche.webp) center center / cover no-repeat`
+                } else {
+                  if (info.weather[0].icon == '09d' || info.weather[0].icon == '10d') {
+                    fondo.style.background = `url(../images/clima/lluvia.jpg) center center / cover no-repeat`
+                  } else {
+                    if (info.weather[0].icon == '09n' || info.weather[0].icon == '10n') {
+                      fondo.style.background = `url(../images/clima/lluvia-noche.jpg) center center / cover no-repeat`
+                    } else {
+                      if (info.weather[0].icon == '11d') {
+                        fondo.style.background = `url(../images/clima/tormenta.jpg) center center / cover no-repeat`
+                      } else {
+                        if (info.weather[0].icon == '11n') {
+                          fondo.style.background = `url(../images/clima/tormenta-noche.jpg) center center / cover no-repeat`
+                        } else {
+                          if (info.weather[0].icon == '50d') {
+                            fondo.style.background = `url(../images/clima/neblina.jpg) center center / cover no-repeat`
+                          } else {
+                            fondo.style.background = `url(../images/clima/neblina-noche.jpg) center center / cover no-repeat`
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    })
+    .catch(error => console.error(error));
 }
 
 clima();
