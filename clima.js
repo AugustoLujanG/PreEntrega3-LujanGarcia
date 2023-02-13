@@ -1,5 +1,6 @@
 const ciudad_api = document.getElementById("ciudad-api");
 const fecha_api = document.getElementById("fecha-api");
+const hora_api = document.getElementById("hora-api");
 const temperatura_api = document.getElementById("temperatura-api");
 const informacion_api = document.getElementById("informacion-api");
 const humedad_api = document.getElementById("humedad-api");
@@ -10,8 +11,8 @@ const fondo = document.getElementById("fondos");
 const claveAPI = "6c0d3feb4e345e0f7d513c4a3e82e61f";
 
 function clima() {
-  let latitud = -34.54430939351462;
-  let longitud = -58.46031572625473;
+  let latitud = -34.542444963342604;
+  let longitud = -58.449545651847;
   let url = `https://api.openweathermap.org/data/2.5/weather?&lat=${latitud}&lon=${longitud}&appid=${claveAPI}&lang=es&units=metric`;
 
   fetch(url)
@@ -19,7 +20,9 @@ function clima() {
     .then(info => {
       let fecha = new Date(info.dt * 1000);
 
-      fecha_api.textContent = fecha.getDate() + "/" + (fecha.getMonth() + 1) + "/" + fecha.getFullYear() + " " + fecha.getHours() + ":" + (fecha.getMinutes() < 10 ? '0' : '') + fecha.getMinutes() + ":" + (fecha.getSeconds() < 10 ? '0' : '') + fecha.getSeconds();
+      fecha_api.textContent = (fecha.getDate() < 10 ? '0' : '') + fecha.getDate() + "/" + ((fecha.getMonth() + 1) < 10 ? '0' : '') + (fecha.getMonth() + 1) + "/" + fecha.getFullYear() // + " " + 
+
+      hora_api.textContent = (fecha.getHours() < 10 ? '0' : '') + fecha.getHours() + ":" + (fecha.getMinutes() < 10 ? '0' : '') + fecha.getMinutes() + ":" + (fecha.getSeconds() < 10 ? '0' : '') + fecha.getSeconds();
 
       let ciudad = info.name;
       ciudad_api.textContent = ciudad;
