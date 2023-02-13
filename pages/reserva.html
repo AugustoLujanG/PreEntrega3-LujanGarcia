@@ -90,7 +90,7 @@
 				<div class="col-md contact-form">
 					<div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 						<form action="">
-							<select class="form-control espaciado" id="tipo">
+							<select class="form-control espaciado" placeholder="Cancha" id="tipo">
 								<option disabled selected>Cancha</option>
 								<option value="Fútbol 5">Fútbol 5</option>
 								<option value="Fútbol 8">Fútbol 8</option>
@@ -99,7 +99,10 @@
 								<option value="Paddle">Paddle</option>
 							</select>
 
-							<input type="date" class="form-control espaciado" id="dia">
+							<div class="form_error_cancha error"></div>
+
+							<input placeholder="dd/mm/aaaa" type="date" class="form-control espaciado" id="dia">
+							<div class="form_error_fecha error"></div>
 
 							<select class="form-control espaciado" id="hora">
 								<option disabled selected>Turno</option>
@@ -119,6 +122,7 @@
 								<option value="22">22 a 23</option>
 								<option value="23">23 a 00</option>
 							</select>
+							<div class="form_error_hora error"></div>
 
 							<input type="submit" name="btnSubmit" class="btnContact espaciado" id="sumar"
 								value="Agregar al carrito" />

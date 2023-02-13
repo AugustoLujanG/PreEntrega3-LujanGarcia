@@ -44,7 +44,7 @@ function allEventListeners() {
     btnAgregar.addEventListener('submit', (e) => {
         e.preventDefault();
         const canchaSelected = canchas[selectCanchas.value];
-        if (carrito.find((item) => {
+        if (canchas.length > 0 && carrito.find((item) => {
                 return (item.cancha.tipo === canchaSelected.tipo && item.cancha.hora === canchaSelected.hora)
             }) === undefined) {
             const nuevoItem = new Item(canchaSelected, 1);

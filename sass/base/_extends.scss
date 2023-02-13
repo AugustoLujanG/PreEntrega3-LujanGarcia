@@ -96,7 +96,7 @@
         @extend %boton;
         @include botones (max-content, 2rem);
         background: #dc3545;
-        color: $color-general;        
+        color: $color-general;
     }
 
 }
@@ -111,7 +111,7 @@
 .footer-box {
     @extend %flex;
 
-    .map {  
+    .map {
         @extend %flex;
         align-items: flex-end;
 
@@ -142,7 +142,7 @@
     }
 
     h1 {
-    @extend %texto-h1;
+        @extend %texto-h1;
     }
 }
 
@@ -152,7 +152,7 @@
     }
 
     h1 {
-    @extend %texto-h1;
+        @extend %texto-h1;
     }
 }
 
@@ -162,7 +162,7 @@
     }
 
     h1 {
-    @extend %texto-h1;
+        @extend %texto-h1;
     }
 }
 
@@ -172,7 +172,7 @@
     }
 
     h1 {
-    @extend %texto-h1;
+        @extend %texto-h1;
     }
 }
 
@@ -182,7 +182,7 @@
     }
 
     h1 {
-    @extend %texto-h1;
+        @extend %texto-h1;
     }
 }
 
@@ -192,7 +192,7 @@
     }
 
     h1 {
-    @extend %texto-h1;
+        @extend %texto-h1;
     }
 }
 
@@ -202,6 +202,6 @@
     }
 
     h1 {
-    @extend %texto-h1;
+        @extend %texto-h1;
     }
 }
